@@ -1,0 +1,17 @@
+{block content}
+<div id="banner">
+	<h1 n:block=title class="main_title">{$idea->title}</h1>
+</div>
+
+<div id="content">
+	<div class="idea">
+		<p>{$idea->description}</p>
+        <p>Estimated time: {$idea->time_estimate}</p>
+        <p>Estimated cost: {$idea->cost_estimate}</p>
+        <p>Listed on: {$idea->create_date|date:'F j, Y'}</p>
+		<br>
+		<h3>Comment:</h3>
+		{control commentForm}
+		<a n:href="Homepage:default">Go back</a>
+	</div>
+</div>
